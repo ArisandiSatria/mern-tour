@@ -8,6 +8,8 @@ import HeroVideo from "../assets/images/hero-video.mp4";
 import worldImg from "../assets/images/world.png";
 
 import Subtitle from "../shared/Subtitle.jsx";
+import SearchBar from "../shared/SearchBar.jsx";
+import ServiceList from "../services/ServiceList.jsx";
 
 const Home = () => {
   return (
@@ -44,13 +46,38 @@ const Home = () => {
             </Col>
             <Col lg="2">
               <div className="hero__img-box mt-4">
-                <video src={HeroVideo} alt="" controls/>
+                <video src={HeroVideo} alt="" controls />
               </div>
             </Col>
             <Col lg="2">
               <div className="hero__img-box mt-5">
                 <img src={HeroImg2} alt="" />
               </div>
+            </Col>
+
+            <SearchBar />
+          </Row>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <Row>
+            <Col lg="3">
+              <h5 className="services__subtitle">What we serve</h5>
+              <h2 className="services__title">We offer our best services</h2>
+            </Col>
+            <ServiceList />
+          </Row>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12" className="mb-5">
+              <Subtitle subtitle={"Explore"}/>
+              <h2 className="featured__tour-title">Our featured tours</h2>
             </Col>
           </Row>
         </Container>
